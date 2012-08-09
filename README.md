@@ -7,5 +7,5 @@ example usage:
 	address.put(JLiveAddressService.CITY, "Cupertino");
 	address.put(JLiveAddressService.STATE, "CA");
  
-	List results = new JLiveAddressService.verifyAddress(address);
+	List results = new JLiveAddressService("<your auth token>").verifyAddress(address);
 

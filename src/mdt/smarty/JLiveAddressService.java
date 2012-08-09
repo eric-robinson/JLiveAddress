@@ -25,7 +25,7 @@ import net.sf.json.JSONObject;
  * address.put(JLiveAddressService.CITY, "Cupertino");
  * address.put(JLiveAddressService.STATE, "CA");
  * 
- * List results = new JLiveAddressService.verifyAddress(address);
+ * List results = new JLiveAddressService("<your API key>").verifyAddress(address);
  * 
  * @author Eric Robinson
  */
