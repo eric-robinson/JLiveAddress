@@ -9,3 +9,4 @@ example usage:
  
 	List results = new JLiveAddressService("<your auth token>").verifyAddress(address);
 
+Requires [Json-lib](http://json-lib.sourceforge.net) 2.2.2 or higher in your projects build path.
