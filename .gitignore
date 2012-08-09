@@ -5,3 +5,5 @@ bin/*
 .gitignore.swp
 .project
 .settings/org.eclipse.jdt.core.prefs
+
+.README.md.swp
