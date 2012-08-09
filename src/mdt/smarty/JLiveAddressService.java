@@ -96,7 +96,6 @@ public class JLiveAddressService {
 
 		List<JLiveAddressResult> addresses = verifyAddresses(array);
 		return addresses;
-
 	}
 
 	/**
@@ -117,8 +116,6 @@ public class JLiveAddressService {
 				throw new IllegalArgumentException("All addresses must contain a \"street\" key");
 			}
 		}
-
-		System.out.println("verifying " + addresses.size() + " addresses.\nrequest json is " + addresses);
 
 		String response = "";
 		String req = addresses.toString();
@@ -152,15 +149,14 @@ public class JLiveAddressService {
 				incoming.close();
 			}
 			catch (IOException e) {
-				System.out.println("IO Exception Error: " + e.toString());
+				System.out.println("JLiveAddressService.verifyAddresses: IO Exception Error: " + e.toString());
 			}
 		}
 		catch (MalformedURLException m) {
-			System.out.println("Malformed URL Exception Error: " + m.toString());
+			System.out.println("JLiveAddressService.verifyAddresses: Malformed URL Exception Error: " + m.toString());
 		}
 
 		JSONArray json = JSONArray.fromObject(response);
-		System.out.println("results are: " + json);
 
 		ArrayList<JLiveAddressResult> results = new ArrayList<JLiveAddressResult>();
 		for (int i = 0; i < json.size(); i++) {
