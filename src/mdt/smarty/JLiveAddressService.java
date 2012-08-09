@@ -18,6 +18,9 @@ import net.sf.json.JSONObject;
 /**
  * This class provides methods for verifying addresses using SmartyStreets'
  * LiveAddress API. http://smartystreets.com/kb/liveaddress-api/rest-endpoint
+ * 
+ * Adapted from example Java code at https://github.com/smartystreets/LiveAddressSamples/tree/master/java
+ * 
  * example usage:
  * 
  * JSONArray address = new JSONArray();
