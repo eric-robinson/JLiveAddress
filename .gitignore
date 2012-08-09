@@ -1,0 +1,7 @@
+build
+build/*
+bin
+bin/*
+.gitignore.swp
+.project
+.settings/org.eclipse.jdt.core.prefs
