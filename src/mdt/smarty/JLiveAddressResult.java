@@ -86,7 +86,7 @@ public class JLiveAddressResult {
 	 * @return
 	 */
 	public String getComponent(String key) {
-		return _addressJSON.optJSONObject(COMPONENTS).getString(key);
+		return _addressJSON.optJSONObject(COMPONENTS).optString(key);
 	}
 
 	/**
@@ -96,7 +96,7 @@ public class JLiveAddressResult {
 	 * @return
 	 */
 	public Object getMetadata(String key) {
-		return _addressJSON.optJSONObject(METADATA).get(key);
+		return _addressJSON.optJSONObject(METADATA).opt(key);
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class JLiveAddressResult {
 	 * @return
 	 */
 	public String getAnalysis(String key) {
-		return _addressJSON.optJSONObject(ANALYSIS).getString(key);
+		return _addressJSON.optJSONObject(ANALYSIS).optString(key);
 	}
 
 	/**
