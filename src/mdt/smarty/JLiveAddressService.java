@@ -28,12 +28,13 @@ import net.sf.json.JSONObject;
  * address.put(JLiveAddressService.CITY, "Cupertino");
  * address.put(JLiveAddressService.STATE, "CA");
  * 
- * List results = new JLiveAddressService("<your API key>").verifyAddress(address);
+ * List results = new JLiveAddressService("<your auth ID>", "<your auth token>").verifyAddress(address);
  * 
  * @author Eric Robinson
  */
 public class JLiveAddressService {
 
+	private String _authId;
 	private String _authToken;
 	private String _requestURL;
 
@@ -52,13 +53,16 @@ public class JLiveAddressService {
 	/**
 	 * Create a JLiveAddressService with the provided authToken
 	 * 
+	 * @param authId
 	 * @param authToken
-	 *          - Your SmartyStreets account auth token, available at
-	 *          https://smartystreets.com/account/keys
+	 *          - Your SmartyStreets account auth ID &token, available at
+	 *          https://smartystreets.com/account/keys. Be sure to use
+	 *          URL-encoded values!
 	 */
-	public JLiveAddressService(String authToken) {
+	public JLiveAddressService(String authId, String authToken) {
+		_authId = authId;
 		_authToken = authToken;
-		_requestURL = "https://api.qualifiedaddress.com/street-address/?auth-token=" + _authToken;
+		_requestURL = "https://api.qualifiedaddress.com/street-address/?auth-id=" + _authId + "&auth-token=" + _authToken;
 	}
 
 	/**
