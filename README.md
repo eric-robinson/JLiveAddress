@@ -7,7 +7,7 @@ example usage:
 	address.put(JLiveAddressService.CITY, "Cupertino");
 	address.put(JLiveAddressService.STATE, "CA");
  
- 	JLiveAddressService service = new JLiveAddressService("<your auth token>");
+ 	JLiveAddressService service = new JLiveAddressService("<your auth ID>", "<your auth token>");
 	List<JLiveAddressResult> results = service.verifyAddress(address);	
 
 Requires [Json-lib](http://json-lib.sourceforge.net) 2.2.2 or higher in your projects build path.
